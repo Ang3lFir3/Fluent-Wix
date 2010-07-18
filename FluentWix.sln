@@ -1,7 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotMyself.FluentWix", "Src\NotMyself.FluentWix\NotMyself.FluentWix.csproj", "{F0ACE8B4-0303-404D-AF43-BF9CDD1AACFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotMyself.FluentWix.Tests", "src\NotMyself.FluentWix.Tests\NotMyself.FluentWix.Tests.csproj", "{F209E006-42AE-4556-A4B7-6CA65E69339E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0ACE8B4-0303-404D-AF43-BF9CDD1AACFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0ACE8B4-0303-404D-AF43-BF9CDD1AACFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0ACE8B4-0303-404D-AF43-BF9CDD1AACFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0ACE8B4-0303-404D-AF43-BF9CDD1AACFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F209E006-42AE-4556-A4B7-6CA65E69339E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F209E006-42AE-4556-A4B7-6CA65E69339E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F209E006-42AE-4556-A4B7-6CA65E69339E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F209E006-42AE-4556-A4B7-6CA65E69339E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

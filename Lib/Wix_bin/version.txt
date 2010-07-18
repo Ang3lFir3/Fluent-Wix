@@ -1,0 +1,1 @@
+WIX (Windows Installer Xml) version 3.0.4805.0
