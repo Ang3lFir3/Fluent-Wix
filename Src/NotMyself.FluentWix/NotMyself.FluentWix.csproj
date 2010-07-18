@@ -40,7 +40,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DummyPropertyInfo.cs" />
+    <Compile Include="InstallationModel\Output\IXmlWriter.cs" />
+    <Compile Include="InstallationModel\Output\IXmlWriterServiceLocator.cs" />
+    <Compile Include="InstallationModel\Output\XmlProductWriter.cs" />
+    <Compile Include="MappingModel\AttributeStore.cs" />
+    <Compile Include="MappingModel\EqualityExtensions.cs" />
+    <Compile Include="MappingModel\IDefaultableEnumerable.cs" />
+    <Compile Include="MappingModel\IMappingBase.cs" />
+    <Compile Include="MappingModel\ProductBased\ProductMapping.cs" />
+    <Compile Include="Mapping\Member.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Accessor.cs" />
+    <Compile Include="Utils\CollectionExtensions.cs" />
+    <Compile Include="Utils\PropertyChain.cs" />
+    <Compile Include="Utils\ReflectionExtensions.cs" />
+    <Compile Include="Utils\ReflectionHelper.cs" />
+    <Compile Include="Utils\SingleMember.cs" />
+    <Compile Include="Utils\XmlExtensions.cs" />
+    <Compile Include="Visitors\IMappingModelVisitor.cs" />
+    <Compile Include="Visitors\NullMappingModelVisitor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
