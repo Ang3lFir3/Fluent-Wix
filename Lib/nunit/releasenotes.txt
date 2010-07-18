@@ -1,0 +1,26 @@
+=== Build 1.0.5 ===
+	20	 Enhancement	 Ordered, OrderedAscending, OrderedDescending	 
+
+=== Build 1.0.4 ===
+	7	 Enhancement	 Suggestion for ICollection.Count assertion	 
+	15	 Enhancement	 EnumeralbeConstraint usage without object initializers	 
+	16	 Enhancement	 Add Count assertion for lists	 
+	17	 Defect	 Fixed	 NunitEx.Test on Mono
+	
+=== Build 1.0.3 ===
+BREAKING CHANGE : see issue 14
+	13	 Enhancement	Type constraint AssignableTo	 
+	14	 Defect		Bad name FiledValue instead of FieldValue
+
+=== Build 1.0.2 ===
+	9	Enhancement	 Object field extension	 
+	10	Enhancement	 System.Type specific constraints	 
+	11	Enhancement	 Match RegEx
+
+=== Build 1.0.1 ===
+
+	1 Defect	 test fix	 
+	2 Enhancement	 improve support to Nullable types	 
+	3 Enhancement	 Or restriction suggestion	 
+	5 Enhancement	 Strong name	 
+	6 Enhancement	 Implement fluently DoesNotThrow
