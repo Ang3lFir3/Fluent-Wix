@@ -26,8 +26,20 @@ namespace NotMyself.FluentWix.InstallationModel.Output
       
       var project = root.AddElement("Product");
 
+      if (productMapping.HasValue(x => x.Id))
+        project.WithAtt("Id", productMapping.Id.ToString());
+
+      if (productMapping.HasValue(x => x.UpgradeCode))
+        project.WithAtt("UpgradeCode", productMapping.UpgradeCode.ToString());
+      
       if (productMapping.HasValue(x => x.Name))
         project.WithAtt("Name", productMapping.Name);
+      
+      if (productMapping.HasValue(x => x.Manufacturer))
+        project.WithAtt("Manufacturer", productMapping.Manufacturer);
+
+      if (productMapping.HasValue(x => x.Version))
+        project.WithAtt("Version", productMapping.Version.ToString());
     }
   }
 }
