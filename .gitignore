@@ -12,7 +12,7 @@ build
 *.csproj.user
 
 *.resharper.user
-
+*.ReSharper.user
 *.resharper
 
 *.suo
