@@ -40,6 +40,8 @@ namespace NotMyself.FluentWix.InstallationModel.Output
 
       if (productMapping.HasValue(x => x.Version))
         project.WithAtt("Version", productMapping.Version.ToString());
+
+      project.AddElement("Package").WithAtt("Id","*");
     }
   }
 }

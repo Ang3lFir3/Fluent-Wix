@@ -48,6 +48,7 @@
     <Compile Include="MappingModel\EqualityExtensions.cs" />
     <Compile Include="MappingModel\IDefaultableEnumerable.cs" />
     <Compile Include="MappingModel\IMappingBase.cs" />
+    <Compile Include="MappingModel\ProductBased\PackageMapping.cs" />
     <Compile Include="MappingModel\ProductBased\ProductMapping.cs" />
     <Compile Include="Mapping\Member.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

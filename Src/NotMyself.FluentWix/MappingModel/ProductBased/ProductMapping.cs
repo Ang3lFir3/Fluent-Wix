@@ -49,6 +49,8 @@ namespace NotMyself.FluentWix.MappingModel.ProductBased
       set { attributes.Set(x => x.UpgradeCode, value); }
     }
 
+    public PackageMapping Package { get; set; }
+
     public override void AcceptVisitor(IMappingModelVisitor visitor)
     {
       visitor.ProcessProject(this);

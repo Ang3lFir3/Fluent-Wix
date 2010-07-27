@@ -53,6 +53,24 @@ namespace NotMyself.FluentWix.Tests.InstallationModel.Output
       result.GetElementsByTagName("Product").Count.Should().Be.EqualTo(1);
     }
 
+    [Test]
+    public void it_should_have_a_single_package_node()
+    {
+        result.GetElementsByTagName("Package").Count.Should().Be.EqualTo(1);
+    }
+
+    [Test]
+    public void it_should_give_the_package_an_Id_attribute()
+    {
+        result.GetElementsByTagName("Package").Item(0).Attributes["Id"].Should().Not.Be.Null();
+    }
+
+    [Test]
+    public void it_should_assign_asterick_to_the_package_nodes_Id()
+    {
+        result.GetElementsByTagName("Package").Item(0).Attributes["Id"].Value.Should().Be.EqualTo("*");
+    }
+
     [Test, Ignore("We are locked into the guid type right now and this is not a valid guid.")]
     public void it_should_have_an_auto_assigned_id()
     {
