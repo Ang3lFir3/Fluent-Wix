@@ -1,33 +1,41 @@
 using System.Collections.Generic;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace NotMyself.FluentWix.Utils
 {
   internal static class XmlExtensions
   {
-    public static XmlElement AddElement(this XmlDocument document, string name)
+    public static XElement AddElement(this XDocument document, string name)
     {
-      var child = document.CreateElement(name);
+      var child = new XElement(name);
 
-      document.AppendChild(child);
+      document.Add(child);
 
       return child;
+    }
+    
+    public static XElement AddElement(this XElement element, string name)
+    {
+        var child = new XElement(name);
+        element.Add(child);
+        return child;
     }
 
     public static XmlElement AddElement(this XmlNode element, string name)
     {
-      XmlElement child = element.OwnerDocument.CreateElement(name);
+      var child = element.OwnerDocument.CreateElement(name);
       element.AppendChild(child);
 
       return child;
     }
 
-    public static XmlElement WithAtt(this XmlElement element, string key, bool value)
+    public static XElement WithAtt(this XElement element, string key, bool value)
     {
       return WithAtt(element, key, value.ToString().ToLowerInvariant());
     }
 
-    public static XmlElement WithAtt(this XmlElement element, string key, int value)
+    public static XElement WithAtt(this XElement element, string key, int value)
     {
       return WithAtt(element, key, value.ToString());
     }
@@ -37,10 +45,11 @@ namespace NotMyself.FluentWix.Utils
     //  return WithAtt(element, key, value.ToString());
     //}
 
-    public static XmlElement WithAtt(this XmlElement element, string key, string attValue)
+    public static XElement WithAtt(this XElement element, string key, string attValue)
     {
-      element.SetAttribute(key, attValue);
-      return element;
+        var attribute = new XAttribute(key, attValue);
+        element.Add(attribute);
+        return element;
     }
 
     public static void SetAttributeOnChild(this XmlElement element, string childName, string attName, string attValue)
@@ -60,14 +69,6 @@ namespace NotMyself.FluentWix.Utils
       {
         element.SetAttribute(pair.Key, pair.Value);
       }
-
-      return element;
-    }
-
-    public static XmlElement SetColumnProperty(this XmlElement element, string name, string value)
-    {
-      XmlElement columnElement = element["column"] ?? element.AddElement("column");
-      columnElement.WithAtt(name, value);
 
       return element;
     }
