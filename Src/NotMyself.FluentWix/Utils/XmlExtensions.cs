@@ -4,7 +4,7 @@ using System.Xml.Linq;
 
 namespace NotMyself.FluentWix.Utils
 {
-  internal static class XmlExtensions
+    public static class XmlExtensions
   {
     public static XElement AddElement(this XDocument document, string name)
     {
