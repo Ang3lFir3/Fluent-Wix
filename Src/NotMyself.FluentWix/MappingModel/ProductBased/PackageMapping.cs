@@ -14,5 +14,7 @@ namespace NotMyself.FluentWix.MappingModel.ProductBased
         {
             throw new NotImplementedException();
         }
+
+        public string Id { get; set; }
     }
 }
