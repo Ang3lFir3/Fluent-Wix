@@ -24,7 +24,7 @@ namespace NotMyself.FluentWix.Tests.InstallationModel.Output
   [TestFixture]
   public class given_an_empty_product_mapping : with_a_xml_product_writer
   {
-    private XDocument result;
+    private XContainer result;
 
     public override void Because()
     {
@@ -83,7 +83,7 @@ namespace NotMyself.FluentWix.Tests.InstallationModel.Output
   [TestFixture]
   public class given_a_named_product_mapping: with_a_xml_product_writer
   {
-    private XDocument result;
+    private XContainer result;
 
     public override void Context()
     {
@@ -106,7 +106,7 @@ namespace NotMyself.FluentWix.Tests.InstallationModel.Output
   [TestFixture]
   public class given_a_uniquely_identified_product_mapping : with_a_xml_product_writer
   {
-    private XDocument result;
+    private XContainer result;
 
     public override void Context()
     {
@@ -129,7 +129,7 @@ namespace NotMyself.FluentWix.Tests.InstallationModel.Output
   [TestFixture]
   public class given_a_product_mapping_with_a_manufacturer : with_a_xml_product_writer
   {
-   private XDocument result;
+   private XContainer result;
 
     public override void Context()
     {
@@ -152,7 +152,7 @@ namespace NotMyself.FluentWix.Tests.InstallationModel.Output
   [TestFixture]
   public class given_a_product_mapping_with_a_version : with_a_xml_product_writer
   {
-    private XDocument result;
+    private XContainer result;
 
     public override void Context()
     {
@@ -175,7 +175,7 @@ namespace NotMyself.FluentWix.Tests.InstallationModel.Output
   [TestFixture]
   public class given_a_product_mapping_with_an_upgrade_code : with_a_xml_product_writer
   {
-    private XDocument result;
+    private XContainer result;
 
     public override void Context()
     {

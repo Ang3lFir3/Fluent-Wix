@@ -5,6 +5,6 @@ namespace NotMyself.FluentWix.InstallationModel.Output
 {
   public interface IXmlWriter<T>
   {
-    XDocument Write(T installationModel);
+    XContainer Write(T installationModel);
   }
 }

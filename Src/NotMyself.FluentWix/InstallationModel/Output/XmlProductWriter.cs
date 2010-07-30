@@ -11,7 +11,7 @@ namespace NotMyself.FluentWix.InstallationModel.Output
   {
     private XDocument document;
 
-    public XDocument Write(ProductMapping installationMapping)
+    public XContainer Write(ProductMapping installationMapping)
     {
       document = null;
       installationMapping.AcceptVisitor(this);
