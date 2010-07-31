@@ -13,6 +13,30 @@ namespace NotMyself.FluentWix.MappingModel.ProductBased
             set { attributes.Set(x => x.Id, value); }
         }
 
+        public string Description
+        {
+            get { return attributes.Get(x => x.Description); }
+            set { attributes.Set(x => x.Description, value); } 
+        }
+
+        public string Comments
+        {
+            get { return attributes.Get(x => x.Comments); }
+            set { attributes.Set(x => x.Comments, value); }
+        }
+
+        public string Keywords
+        {
+            get { return attributes.Get(x => x.Keywords); }
+            set { attributes.Set(x => x.Keywords, value); }
+        }
+
+        public string Manufacturer
+        {
+            get { return attributes.Get(x => x.Manufacturer); }
+            set { attributes.Set(x => x.Manufacturer, value); }
+        }
+
         public PackageMapping(): this(new AttributeStore())
         {
         }
@@ -30,7 +54,7 @@ namespace NotMyself.FluentWix.MappingModel.ProductBased
 
         public bool IsSpecified(string property)
         {
-            throw new NotImplementedException();
+            return attributes.IsSpecified(property);
         }
 
         public bool HasValue<TResult>(Expression<Func<PackageMapping, TResult>> property)
