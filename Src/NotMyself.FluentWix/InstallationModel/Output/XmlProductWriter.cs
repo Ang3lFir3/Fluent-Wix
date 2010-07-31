@@ -18,7 +18,7 @@ namespace NotMyself.FluentWix.InstallationModel.Output
       return document;
     }
 
-    public void ProcessProject(ProductMapping productMapping)
+    public void ProcessMapping(ProductMapping productMapping)
     {
       document = new XDocument();
 

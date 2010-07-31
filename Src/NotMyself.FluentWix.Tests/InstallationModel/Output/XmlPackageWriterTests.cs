@@ -64,7 +64,7 @@ namespace NotMyself.FluentWix.Tests.InstallationModel.Output
             return result.WithAtt("Id","*");
         }
 
-        public void ProcessProject(PackageMapping mapping)
+        public void ProcessMapping(PackageMapping mapping)
         {
             throw new NotImplementedException();
         }

@@ -53,7 +53,7 @@ namespace NotMyself.FluentWix.MappingModel.ProductBased
 
     public void AcceptVisitor(IMappingModelVisitor<ProductMapping> visitor)
     {
-      visitor.ProcessProject(this);
+      visitor.ProcessMapping(this);
     }
 
     public bool IsSpecified(string property)

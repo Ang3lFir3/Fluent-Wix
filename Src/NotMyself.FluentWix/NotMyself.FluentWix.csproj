@@ -47,7 +47,7 @@
     <Compile Include="MappingModel\AttributeStore.cs" />
     <Compile Include="MappingModel\EqualityExtensions.cs" />
     <Compile Include="MappingModel\IDefaultableEnumerable.cs" />
-    <Compile Include="MappingModel\IMappingBase.cs" />
+    <Compile Include="MappingModel\IAcceptVisitorsFor.cs" />
     <Compile Include="MappingModel\ProductBased\PackageMapping.cs" />
     <Compile Include="MappingModel\ProductBased\ProductMapping.cs" />
     <Compile Include="Mapping\Member.cs" />
@@ -60,7 +60,6 @@
     <Compile Include="Utils\SingleMember.cs" />
     <Compile Include="Utils\XmlExtensions.cs" />
     <Compile Include="Visitors\IMappingModelVisitor.cs" />
-    <Compile Include="Visitors\NullMappingModelVisitor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
