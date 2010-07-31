@@ -56,17 +56,43 @@ namespace NotMyself.FluentWix.Tests.InstallationModel.Output
         }
     }
 
+    [TestFixture]
+    public class given_a_package_mapping_with_an_Id : with_a_xml_package_writer
+    {
+        XContainer result;
+        protected string the_id = "abc123";
+
+        public override void Because()
+        {
+            mapping.Id = the_id;
+            result = writer.Write(mapping);
+        }
+
+        [Test]
+        public void it_should_should_set_the_Id_attribute_to_the_id()
+        {
+            (result as XElement).Attribute("Id").Value.Should().Be.EqualTo(the_id);
+        }
+    }
+
+
+
     public class XmlPackageWriter :IMappingModelVisitor<PackageMapping>, IXmlWriter<PackageMapping>
     {
-        public XContainer Write(PackageMapping installationModel)
+        XElement packageElement;
+
+        public XContainer Write(PackageMapping mappingModel)
         {
-            var result = new XElement("Package");
-            return result.WithAtt("Id","*");
+            packageElement = null;
+            mappingModel.AcceptVisitor(this);
+            return packageElement;
         }
 
         public void ProcessMapping(PackageMapping mapping)
         {
-            throw new NotImplementedException();
+            packageElement = new XElement("Package");
+
+            packageElement.WithAtt("Id", mapping.Id);
         }
     }
 }
