@@ -2,8 +2,8 @@ using NotMyself.FluentWix.MappingModel.ProductBased;
 
 namespace NotMyself.FluentWix.Visitors
 {
-  public interface IMappingModelVisitor
+  public interface IMappingModelVisitor<T>
   {
-    void ProcessProject(ProductMapping productMapping);
+    void ProcessProject(T mapping);
   }
 }

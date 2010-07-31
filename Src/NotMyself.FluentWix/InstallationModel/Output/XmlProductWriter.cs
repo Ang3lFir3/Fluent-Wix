@@ -7,7 +7,7 @@ using NotMyself.FluentWix.Visitors;
 
 namespace NotMyself.FluentWix.InstallationModel.Output
 {
-  public class XmlProductWriter : NullMappingModelVisitor, IXmlWriter<ProductMapping>
+  public class XmlProductWriter : IMappingModelVisitor<ProductMapping>, IXmlWriter<ProductMapping>
   {
     private XDocument document;
 
@@ -18,7 +18,7 @@ namespace NotMyself.FluentWix.InstallationModel.Output
       return document;
     }
 
-    public override void ProcessProject(ProductMapping productMapping)
+    public void ProcessProject(ProductMapping productMapping)
     {
       document = new XDocument();
 

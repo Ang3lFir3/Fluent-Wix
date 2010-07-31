@@ -1,8 +1,10 @@
+using System;
 using System.Xml.Linq;
 using NotMyself.FluentWix.InstallationModel.Output;
 using NotMyself.FluentWix.MappingModel.ProductBased;
 using NotMyself.FluentWix.Tests.Infrastructure;
 using NotMyself.FluentWix.Utils;
+using NotMyself.FluentWix.Visitors;
 using NUnit.Framework;
 
 namespace NotMyself.FluentWix.Tests.InstallationModel.Output
@@ -54,14 +56,17 @@ namespace NotMyself.FluentWix.Tests.InstallationModel.Output
         }
     }
 
-
-
-    public class XmlPackageWriter : IXmlWriter<PackageMapping>
+    public class XmlPackageWriter :IMappingModelVisitor<PackageMapping>, IXmlWriter<PackageMapping>
     {
         public XContainer Write(PackageMapping installationModel)
         {
             var result = new XElement("Package");
             return result.WithAtt("Id","*");
+        }
+
+        public void ProcessProject(PackageMapping mapping)
+        {
+            throw new NotImplementedException();
         }
     }
 }

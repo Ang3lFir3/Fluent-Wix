@@ -4,7 +4,7 @@ using NotMyself.FluentWix.Visitors;
 
 namespace NotMyself.FluentWix.MappingModel.ProductBased
 {
-  public class ProductMapping : MappingBase
+  public class ProductMapping : IAcceptVisitorsFor<ProductMapping>
   {
     private readonly AttributeStore<ProductMapping> attributes;
 
@@ -51,12 +51,12 @@ namespace NotMyself.FluentWix.MappingModel.ProductBased
 
     public PackageMapping Package { get; set; }
 
-    public override void AcceptVisitor(IMappingModelVisitor visitor)
+    public void AcceptVisitor(IMappingModelVisitor<ProductMapping> visitor)
     {
       visitor.ProcessProject(this);
     }
 
-    public override bool IsSpecified(string property)
+    public bool IsSpecified(string property)
     {
       return attributes.IsSpecified(property);
     }

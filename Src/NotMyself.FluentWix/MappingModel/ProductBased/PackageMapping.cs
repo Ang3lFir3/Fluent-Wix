@@ -3,14 +3,14 @@ using NotMyself.FluentWix.Visitors;
 
 namespace NotMyself.FluentWix.MappingModel.ProductBased
 {
-    public class PackageMapping : MappingBase
+    public class PackageMapping : IAcceptVisitorsFor<PackageMapping>
     {
-        public override void AcceptVisitor(IMappingModelVisitor visitor)
+        public void AcceptVisitor(IMappingModelVisitor<PackageMapping> visitor)
         {
             throw new NotImplementedException();
         }
 
-        public override bool IsSpecified(string property)
+        public bool IsSpecified(string property)
         {
             throw new NotImplementedException();
         }
